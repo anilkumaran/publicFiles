@@ -26,9 +26,25 @@ public class DivideByZeroHandler {
 public class PalindromeChecker {
     public static void main(String[] args) {
         String inputString = "radar"; // Change this string to test other cases
-        boolean isPalindrome = inputString.replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(new StringBuilder(inputString).reverse().toString());
         // boolean isPalindrome = inputString.equalsIgnoreCase(new StringBuilder(inputString).reverse().toString());
+        // boolean isPalindrome = inputString.replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(new StringBuilder(inputString).reverse().toString());
+        
         if (isPalindrome) {
+            System.out.println("Given number is palindrome");
+        }
+        else {
+            System.out.println("Given number is not palindrome");
+
+        }
+    }
+}
+
+public class PalindromeChecker2 {
+    public static void main(String[] args) {
+        String inputString = "radar";
+        String reversed_string = inputString).reverse().toString();
+        
+        if (inputString.equals(reversed_string)) {
             System.out.println("Given number is palindrome");
         }
         else {
