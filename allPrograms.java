@@ -7,7 +7,7 @@ class HelloWorld {
 }
 
 // try catch example
-ublic class DivideByZeroHandler {
+public class DivideByZeroHandler {
     public static void main(String[] args) {
         int numerator = 10;
         int denominator = 0;
