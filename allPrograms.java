@@ -59,23 +59,30 @@ public class EvenOddNumbers {
 }
 
 // prime number
-public class PrimeNumberChecker {
+public class PrimeNumbersFinder {
     public static void main(String[] args) {
-        int number = 17; // Change this number to check other cases
+        int start = 1;
+        int end = 19;
 
-        boolean isPrime = true;
-
-        if (number <= 1) {
-            isPrime = false;
-        }
-        else {
-            for (int i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i == 0) {
-                    isPrime = false;
-                    break;
-                }
+        System.out.println("Prime numbers between " + start + " and " + end + ":");
+        for (int num = start; num <= end; num++) {
+            if (isPrime(num)) {
+                System.out.print(num + " ");
             }
         }
-        System.out.println(number + " is " + (isPrime ? "prime" : "not prime"));
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
