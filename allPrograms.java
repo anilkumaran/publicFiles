@@ -27,6 +27,7 @@ public class PalindromeChecker {
     public static void main(String[] args) {
         String inputString = "radar"; // Change this string to test other cases
         boolean isPalindrome = inputString.replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(new StringBuilder(inputString).reverse().toString());
+        // boolean isPalindrome = inputString.equalsIgnoreCase(new StringBuilder(inputString).reverse().toString());
         if (isPalindrome) {
             System.out.println("Given number is palindrome");
         }
