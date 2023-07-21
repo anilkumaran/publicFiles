@@ -42,7 +42,7 @@ public class PalindromeChecker {
 public class PalindromeChecker2 {
     public static void main(String[] args) {
         String inputString = "radar";
-        String reversed_string = inputString).reverse().toString();
+        String reversed_string = inputString.reverse().toString();
         
         if (inputString.equals(reversed_string)) {
             System.out.println("Given number is palindrome");
