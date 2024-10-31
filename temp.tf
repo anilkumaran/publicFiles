@@ -27,7 +27,7 @@ resource "aws_iam_role_policy_attachment" "codepipeline_attach" {
 
 resource "aws_iam_role_policy_attachment" "s3_access_attach" {
   role       = aws_iam_role.codepipeline_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonS3_FullAccess"
+  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 }
 
 resource "aws_codeui_build_project" "ui_build_project" {
