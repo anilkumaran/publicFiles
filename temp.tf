@@ -20,15 +20,36 @@ resource "aws_iam_role" "codepipeline_role" {
 }
 
 
-resource "aws_iam_role_policy_attachment" "codepipeline_attach" {
-  role       = aws_iam_role.codepipeline_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AWSCodePipeline_FullAccess"
+#resource "aws_iam_role_policy_attachment" "codepipeline_attach" {
+#  role       = aws_iam_role.codepipeline_role.name
+#  policy_arn = "arn:aws:iam::aws:policy/AWSCodePipeline_FullAccess"
+#}
+
+#resource "aws_iam_role_policy_attachment" "s3_access_attach" {
+#  role       = aws_iam_role.codepipeline_role.name
+#  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+#}
+data "aws_iam_policy_document" "codepipeline_policy" {
+  statement {
+    effect    = "Allow"
+    actions   = [
+      "s3:*",
+      "codepipeline:*"
+    ]
+    resources = ["*"]
+  }
 }
 
-resource "aws_iam_role_policy_attachment" "s3_access_attach" {
-  role       = aws_iam_role.codepipeline_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+resource "aws_iam_policy" "codepipleine_policy" {
+  name        = "codepipeline-policy"
+  policy      = data.aws_iam_policy_document.codepipeline_policy.json
 }
+
+resource "aws_iam_role_policy_attachment" "codepipeline-role-attach" {
+  role       = aws_iam_role.codepipeline_role.name
+  policy_arn = aws_iam_policy.codepipleine_policy.arn
+}
+
 
 resource "aws_codeui_build_project" "ui_build_project" {
   name          = "UI-Build"
