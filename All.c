@@ -4,17 +4,17 @@
 #include <stdio.h>
 
 int main() {
-    int num, reversed = 0, remainder;
+    int n, reversed = 0, remainder;
 
     // Input from user
     printf("Enter an integer: ");
-    scanf("%d", &num);
+    scanf("%d", &n);
 
     // Reverse the number
-    while (num != 0) {
-        remainder = num % 10;          // Extract last digit
+    while (n != 0) {
+        remainder = n % 10;          // Extract last digit
         reversed = reversed * 10 + remainder; // Append to reversed number
-        num /= 10;                     // Remove last digit
+        n /= 10;                     // Remove last digit
     }
 
     printf("Reversed number: %d\n", reversed);
@@ -148,25 +148,26 @@ FILE* openFile(const char *filename, const char *mode) {
 }
 
 void copyFile(const char *source, const char *destination) {
-    FILE *srcFile = openFile(source, "rb"); // Open source file in binary read mode
-    FILE *destFile = openFile(destination, "wb"); // Open destination file in binary write mode
+    FILE *sfp = openFile(source, "rb"); // Open source file in binary read mode
+    FILE *dfp = openFile(destination, "wb"); // Open destination file in binary write mode
 
     char buffer[1024]; // Buffer to hold data during copy
     size_t bytesRead;
 
-    while ((bytesRead = fread(buffer, 1, sizeof(buffer), srcFile)) > 0) {
-        fwrite(buffer, 1, bytesRead, destFile);
+    while ((bytesRead = fread(buffer, 1, sizeof(buffer), sfp)) > 0) {
+        fwrite(buffer, 1, bytesRead, dfp);
     }
 
     // Close both files
-    fclose(srcFile);
-    fclose(destFile);
+    fclose(sfp);
+    fclose(dfp);
 
     printf("File copied successfully!\n");
 }
 
 int main() {
-    const char *sourceFile = "source.txt"; // Replace with your source file name
+    const char *sourceFile = "source.txt";
+     // Replace with your source file name
     const char *destinationFile = "destination.txt"; // Replace with your destination file name
 
     copyFile(sourceFile, destinationFile); // Call the copy function
