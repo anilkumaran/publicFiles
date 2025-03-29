@@ -1513,7 +1513,7 @@ public class BinaryToObject {
         oos.writeObject(person);
         oos.close();
         
-        ByteArrayInputStream bais = new ByteArrayInputStream(byteOut.toByteArray());
+        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
         ObjectInputStream ois = new ObjectInputStream(bais);
         Person deserializedPerson = (Person) ois.readObject();
         ois.close();
