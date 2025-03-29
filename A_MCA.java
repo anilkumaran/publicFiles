@@ -1508,14 +1508,14 @@ public class BinaryToObject {
         
         Person person = new Person(name, age);
         
-        ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(byteOut);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(baos);
         oos.writeObject(person);
         oos.close();
         
-        ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());
-        ObjectInputStream ois = new ObjectInputStream(byteIn);
-        Person deserializedPerson = (Person) in.readObject();
+        ByteArrayInputStream bais = new ByteArrayInputStream(byteOut.toByteArray());
+        ObjectInputStream ois = new ObjectInputStream(bais);
+        Person deserializedPerson = (Person) ois.readObject();
         ois.close();
         
         System.out.println("Deserialized: " + deserializedPerson);
@@ -1559,12 +1559,12 @@ public class ObjectToBinary {
         
         Person person = new Person(name, age);
         
-        ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
-        ObjectOutputStream out = new ObjectOutputStream(byteOut);
-        out.writeObject(person);
-        out.close();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(baos);
+        oos.writeObject(person);
+        oos.close();
         
-        byte[] binaryData = byteOut.toByteArray();
+        byte[] binaryData = baos.toByteArray();
         System.out.println("Binary Data: " + new String(binaryData));
         
         scanner.close();
