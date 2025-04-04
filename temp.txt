@@ -1,0 +1,10 @@
+Hi,
+
+As a passionate DevOps Engineer with hands-on experience automating infrastructure, optimizing CI/CD workflows, and scaling cloud-native environments, I was excited to see the opportunity at <company_name>. Your focus on DevOps aligns perfectly with what I love doing—building fast, reliable, and secure systems that empower developers to ship with confidence.
+
+I’ve just applied and would be thrilled to connect, share how I can add value, and learn more about your team’s vision.
+
+Thanks for your time, and I hope to hear from you soon!
+
+Best,
+Anil K
