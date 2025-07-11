@@ -1,5 +1,3 @@
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -9,6 +7,8 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+
+    isEmpty = lambda self: not bool(self.head)
 
     def append(self, data):
         new_node = Node(data)
@@ -23,7 +23,7 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def insert_at(self, position, data):
+    def insertAt(self, position, data):
         if not self.head:
             self.head = Node(data)
             print(f"Inserted {data} at position {position}.")
@@ -89,7 +89,7 @@ class LinkedList:
             print(f"Key {key} deleted successfully.")
             return
 
-    def print_linked_list(self):
+    def printLlinkedList(self):
         current_node = self.head
         if current_node is None:
             print("The linked list is empty.")
@@ -115,8 +115,8 @@ class LinkedList:
     8
 
     '''
-    def reverse_in_place_using_array(self):
-        # self.print_linked_list()
+    def reverseInPlaceUsingArray(self):
+        # self.printLlinkedList()
         if self.head is None:
             print(f"Linked list is empty.")
             return
@@ -133,7 +133,7 @@ class LinkedList:
         print("Reversed successfully")
         return reversed_ll
        
-    def reverse_in_place(self):
+    def reverseInPlace(self):
         if self.head is None:
             print(f"Linked list is empty.")
             return
@@ -146,22 +146,19 @@ class LinkedList:
         return reversed_ll
     
 ll = LinkedList()
-ll.append(2)
+# ll.append(2)
 # ll.prepend(15)
-ll.append(5)
-ll.append(7)
+# ll.append(5)
+# ll.append(7)
 # ll.prepend(10)
 
-ll.print_linked_list()
+ll.printLlinkedList()
 # ll.search(7)
-# # ll.print_linked_list()
+# # ll.printLlinkedList()
 # ll.delete(7)
-# ll.print_linked_list()
-# ll.insert_at(3, 88)
+# ll.printLlinkedList()
+# ll.insertAt(3, 88)
 
-# ll = ll.reverse_in_place()
-# ll.print_linked_list()
-print(ll.head.data)
-print(ll.head.next.data)
-print(ll.tail.data)
-print(ll.tail.next)
+# ll = ll.reverseInPlace()
+# ll.printLlinkedList()
+print(ll.isEmpty())
