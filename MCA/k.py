@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-marks = [85, 90, 88]
+marks = [10, 30, 60]
 subjects = ['Math', 'Science', 'English']
 
 # plt.pie(marks, labels=subjects, autopct='%1.1f%%', startangle=90)
