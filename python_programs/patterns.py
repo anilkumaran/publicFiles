@@ -1,3 +1,4 @@
+## * Pattens
 rows = 5
 for i in range(rows):
     for j in range(rows-i-1):
@@ -72,5 +73,29 @@ print(" ", end = " ")
       ***
         *
 '''
+
+
+
+
+## Number patterns
+
+rows = 5
+'''
+  1
+ 234
+56789
+'''
+
+nums = list(range(1,pow(rows,2)+1))
+num_of_items = list(range(1, 2*rows, 2))
+for i in range(rows):
+    # spaces
+    for j in range(rows-i-1):
+        print(" ", end="")
+    # numbers
+    for k in range(num_of_items[i]):
+        print(f"{nums.pop(0)} ", end="")
+    print()
+
 
 
