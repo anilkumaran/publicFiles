@@ -1,2 +1,6 @@
 1 3D editing pic
 First ask me to upload an image. Then Create a 1/7 scale commercialized figurine of the characters in the picture, in a realistic style, in a real environment. The figurine is placed on a computer desk. The figurine has a round transparent acrylic base, with no text on the base. The content on the computer screen is a 3D modeling process of this figurine. Next to the computer screen is a toy packaging box, designed in a style reminiscent of high-quality collectible figures, printed with original artwork. The packaging features two-dimensional flat illustrations.
+
+
+Formal
+Use the uploaded image as the strict face reference. DO NOT alter the face, identity, skin tone, facial features, proportions, or expression in any way. Keep the face 100% identical without beautification or reshaping. Preserve the original skin tone and texture. Clean and groom the moustache and facial hair—make it neat, sharp, well-trimmed, and defined, without changing the natural shape of the face. Only change the hairstyle to a modern clean sharp style and dress the subject in a premium royal-blue formal coat. Add cinematic luxury ‘trillionaire aesthetic’ lighting and background. No other changes.
