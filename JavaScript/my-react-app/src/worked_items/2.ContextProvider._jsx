@@ -1,0 +1,27 @@
+import { useState, useEffect, createContext, useContext } from 'react'
+import './App.css'
+
+
+const EmpContext = createContext();
+
+function App() {
+  const [empName, setEmpName] = useState("Anil");
+  return (
+    <EmpContext.Provider value={{ empName, setEmpName }}>
+    <>
+      <div>
+        <Level1 />
+      </div>
+    </>
+    </EmpContext.Provider>
+  )
+}
+
+function Level1() { return <div><Dashboard /></div>}
+
+function Dashboard() {
+  const { empName, setEmpName } = useContext(EmpContext);
+  return <h1>Hello {empName}</h1>
+}
+
+export default App

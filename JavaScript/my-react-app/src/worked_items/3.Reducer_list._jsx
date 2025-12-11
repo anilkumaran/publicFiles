@@ -1,0 +1,37 @@
+import { useReducer, useState } from "react";
+
+export default function App() {
+  const initialState = {items: []}
+  const [state, dispatch] = useReducer(reducer, initialState)
+  const [name, setName] = useState('');
+
+  function reducer(state, action) {
+    // console.log(JSON.stringify(action.payload));
+    switch(action.type) {
+      case 'add_item': return {items: [...state.items, {name:action.payload.name}]};
+      case 'remove_item': return  { items: state.items.filter((item, i) => i != action.payload.index )}
+      case 'clear_items': return initialState;
+      default: return state;
+    }
+  }
+
+  return (
+    <div>
+      <h1>Welcome to My React App</h1>
+      <input onChange={(e) => {setName(e.target.value)}}/>
+      <button onClick={() => dispatch({type: 'add_item', payload: {name: name}})} >Add Item</button>
+      <ul>
+        {state.items.length > 0
+          ? state.items.map((item, i) => {
+            return <div key={i}>
+              <li key={i}>
+                {item.name} <button onClick={() => dispatch({type: 'remove_item', payload: {index: i}})}>X</button>
+              </li>
+            </div>
+          })
+          : <li>No items found</li>
+        }
+      </ul>
+    </div>
+  );
+}

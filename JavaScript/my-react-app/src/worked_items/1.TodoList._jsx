@@ -1,0 +1,58 @@
+import { useState, useEffect } from 'react'
+import './App.css'
+function App() {
+  const [todoList, setTodoList] = useState([
+    {name: 'Learn React', when: 'Today'},
+    {name: 'Learn Vite', when: 'Tomorrow'},
+    {name: 'Build something awesome', when: 'This Week'},
+  ])
+  const [newName, setNewName] = useState('')
+  function handleNewNameChange(e) {
+    if (e.target.value.length > 20) {
+      alert('Task name cannot exceed 20 characters');
+      return;
+    }
+    console.log(e.target.value.length);
+    
+    if (e.target.value.length == 0) {
+      alert('Task name cannot be empty');
+      return;
+    }
+    setNewName(e.target.value)
+    
+  }
+
+  useEffect(() => {
+    console.log("FROM useEffect: Component rendered");
+  });
+  return (
+    <>
+      <div>
+        <ul>
+          {
+            todoList.length == 0
+            ? <p>'No items in Todo List'</p>
+            : todoList.map((item, index) => <li key={index}>{item.name} | {item.when}</li>)
+          }
+        </ul>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <div>
+            <input type='text' value={newName} placeholder='Task Name' onChange={handleNewNameChange} />
+            <button disabled={newName.length == 0} onClick={
+              () => 
+                {
+                  setTodoList([...todoList, {name: newName, when: 'Today'}]);
+                  setNewName('');
+                }
+              }>Add item to TodoList</button>
+          </div>
+          <div>
+            <button onClick={() => setTodoList([])}>Clear Todo List</button>
+          </div>
+        </form>
+      </div>
+    </>
+  )
+}
+
+export default App

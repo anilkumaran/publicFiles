@@ -13,3 +13,16 @@ def add(a, b):
     print_n_write_to_file(f'a: {a}')
     print_n_write_to_file(f'b: {b}')
     return a + b
+
+
+
+# Decorator
+def log(fn):
+    def wrapper(*args, **kwargs):
+        print("called", fn.__name__)
+        return fn(*args, **kwargs)
+    return wrapper
+
+@log
+def sub(a, b):
+    return a + b
