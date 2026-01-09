@@ -1,0 +1,96 @@
+AMAZON WEB SERVICES (AWS) – PRACTICAL EXAM NOTES
+
+1. Introduction to AWS
+Amazon Web Services (AWS) is a cloud computing platform provided by Amazon.
+It offers on-demand computing resources such as servers, storage, databases,
+networking, and software services over the internet.
+Users do not need to buy or maintain physical hardware.
+
+2. What is Cloud Computing?
+Cloud computing is the delivery of computing services like servers, storage,
+databases, networking, and software through the internet.
+AWS is one of the leading cloud service providers.
+
+3. Key Features of AWS
+1) On-Demand Service:
+   Resources can be created and removed anytime.
+2) Pay-as-You-Go:
+   Users pay only for the resources they use.
+3) Scalability:
+   Resources can be increased or decreased based on workload.
+4) High Availability:
+   Services run across multiple data centers.
+5) Security:
+   AWS provides encryption, access control, and monitoring.
+
+4. AWS Global Infrastructure
+AWS infrastructure consists of:
+1) Regions:
+   Geographical locations such as Mumbai, US East, etc.
+2) Availability Zones (AZs):
+   Multiple data centers within a region.
+3) Edge Locations:
+   Used for content delivery through CloudFront.
+
+5. Important AWS Services
+
+5.1 Compute Services
+1) EC2 (Elastic Compute Cloud):
+   Provides virtual servers to run applications.
+2) Lambda:
+   Runs code without managing servers (serverless computing).
+
+5.2 Storage Services
+1) S3 (Simple Storage Service):
+   Used to store files, images, videos, and backups.
+2) EBS (Elastic Block Store):
+   Block storage attached to EC2 instances.
+3) Glacier:
+   Low-cost storage for backup and archive data.
+
+5.3 Database Services
+1) RDS (Relational Database Service):
+   Managed databases like MySQL, PostgreSQL, Oracle.
+2) DynamoDB:
+   NoSQL database with high performance.
+3) Aurora:
+   High-performance database compatible with MySQL and PostgreSQL.
+
+5.4 Networking Services
+1) VPC (Virtual Private Cloud):
+   Creates a private network in AWS.
+2) Elastic Load Balancer (ELB):
+   Distributes traffic across multiple servers.
+3) Route 53:
+   DNS and domain management service.
+
+5.5 Security Services
+1) IAM (Identity and Access Management):
+   Manages users, roles, and permissions.
+2) Security Groups:
+   Act as a virtual firewall.
+3) WAF (Web Application Firewall):
+   Protects web applications from attacks.
+
+6. Advantages of AWS
+1) No need to purchase hardware.
+2) Cost-effective and flexible.
+3) Highly secure.
+4) Easy backup and recovery.
+5) Suitable for startups and enterprises.
+
+7. Applications of AWS
+1) Web and mobile application hosting.
+2) Data storage and backup.
+3) Machine learning and AI.
+4) Internet of Things (IoT).
+5) DevOps and CI/CD pipelines.
+
+8. Conclusion
+AWS is a powerful cloud computing platform that helps organizations
+build, deploy, and manage applications efficiently.
+It is widely used due to its scalability, security, and cost benefits.
+
+EXAM SHORT NOTE:
+AWS is a cloud computing platform by Amazon that provides on-demand services
+like compute, storage, databases, and networking.
