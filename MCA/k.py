@@ -1,9 +1,0 @@
-import matplotlib.pyplot as plt
-
-marks = [10, 30, 60]
-subjects = ['Math', 'Science', 'English']
-
-# plt.pie(marks, labels=subjects, autopct='%1.1f%%', startangle=90)
-plt.pie(marks, labels=subjects, autopct='%1.1f%%', colors=['#ff9999','#66b3ff','#99ff99'])
-plt.title("Marks Distribution of a Student")
-plt.show()
